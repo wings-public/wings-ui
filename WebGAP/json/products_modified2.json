@@ -1,0 +1,17 @@
+[{"id":"HP:0000001","parent":"#","text":"HP:0000001 - Abnormal Sharpey fiber morphology"},
+{"id":"HP:0000118","parent":"HP:0000001","text":"HP:0000118 - Premature skin wrinkling"},
+{"id":"HP:0000924","parent":"HP:0000118","text":"HP:0000924 - Enthesitis"},
+{"id":"HP:0011842","parent":"HP:0000924","text":"HP:0011842 - Polyotia"},
+{"id":"HP:0001367","parent":"HP:0011842","text":"HP:0001367 - Decreased corneal thickness"},
+{"id":"HP:0009810","parent":"HP:0001367","text":"HP:0009810 - Mosaic central corneal dystrophy"},
+{"id":"HP:0003019","parent":"HP:0009810","text":"HP:0003019 - Decreased corneal thickness"},
+{"id":"HP:0001191","parent":"HP:0003019","text":"HP:0001191 - Mosaic central corneal dystroph,y"},
+{"id":"HP:0001495","parent":"HP:0001191","text":"HP:0001495 - Mosaic central corneal dystrophy"},
+{"id":"HP:0000001","parent":"#","text":"HP:0000001 - Abnormal Sharpey fiber morphology"},
+{"id":"HP:0000118","parent":"HP:0000001","text":"HP:0000118 - Premature skin wrinkling"},
+{"id":"HP:0040064","parent":"HP:0000118","text":"HP:0040064 - Enthesitis"},
+{"id":"HP:0002817","parent":"HP:0040064","text":"HP:0002817 - Polyotia"},
+{"id":"HP:0001155","parent":"HP:0002817","text":"HP:0001155 - Polyotia"},
+{"id":"HP:0001191","parent":"HP:0001155","text":"HP:0001191 - Polyotia"},
+{"id":"HP:0001495","parent":"HP:0001191","text":"HP:0001495 - Polyotia"}]
+

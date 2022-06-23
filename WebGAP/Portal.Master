@@ -1,0 +1,315 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Portal.master.cs" Inherits="WebGAP.Portal" %>
+
+<%@ Register Assembly="Telerik.Web.UI" Namespace="Telerik.Web.UI" TagPrefix="telerik" %>
+
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <%--added by nasim, it's temporary--%>
+    <style>
+        .isDisabled {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+
+            .isDisabled > a {
+                color: currentColor;
+                display: inline-block; /* For IE11 */
+                pointer-events: none;
+                text-decoration: none;
+            }
+
+        .avatar {
+            width: 50px !important;
+        }
+
+        .vertical-mmenu .main-menu {
+           margin-top: 23px !important
+       }
+        .btn_logout{
+            display:block;
+            padding:10px 0;
+        }
+    </style>
+    <%--end--%>
+    <meta charset="utf-8" />
+    <%--<meta http-equiv="refresh" content="30">--%>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%: Page.Title %> - WiNGS</title>
+
+    <asp:PlaceHolder runat="server">
+        <%: Styles.Render("~/bundles/AllCustomCss") %>
+        <%: Scripts.Render("~/bundles/modernizr") %>
+        <%: Scripts.Render("~/bundles/jquery") %>
+    </asp:PlaceHolder>
+    <webopt:BundleReference runat="server" Path="~/Secound/maincss" />
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <%--  <link href='https://fonts.googleapis.com/css?family=Roboto:400,100italic,100,300,300italic' rel='stylesheet' type='text/css'>--%>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Muli:300,400,500,700" rel="stylesheet">
+    <link href="~/Content/custom.css" rel="stylesheet" type="text/css" media="screen" runat="server" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+
+
+
+<body data-open="click" data-menu="vertical-mmenu" data-col="2-columns" class="vertical-layout vertical-mmenu 2-columns menu-expanded fixed-navbar">
+    <form id="form1" runat="server" class="form form-horizontal" style="height: inherit">
+        <telerik:RadAjaxManager ID="RadAjaxManager1" runat="server">
+            <AjaxSettings>
+
+                <telerik:AjaxSetting AjaxControlID="RW_EditProfile">
+                    <UpdatedControls>
+                        <telerik:AjaxUpdatedControl ControlID="RAP_mainPanel" LoadingPanelID="RadAjaxLoadingPanel1" />
+                    </UpdatedControls>
+                </telerik:AjaxSetting>
+            </AjaxSettings>
+
+        </telerik:RadAjaxManager>
+        <telerik:RadAjaxLoadingPanel ID="RadAjaxLoadingPanel1" runat="server" Transparency="30" Skin="Office2007" />
+
+        <telerik:RadScriptManager ID="RadScriptManager1" EnablePageMethods="true" runat="server"></telerik:RadScriptManager>
+        <telerik:RadAjaxPanel runat="server" ID="RAP_mainPanel">
+
+            <nav class="header-navbar navbar-expand-md navbar navbar-with-menu fixed-top navbar-dark navbar-border navbar-shadow">
+                <div class="navbar-wrapper">
+                    <div class="navbar-header">
+                        <ul class="nav navbar-nav flex-row">
+                            <li class="nav-item mobile-menu d-md-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs"><i class="icon-menu5 font-large-1"></i></a></li>
+                            <li class="nav-item">
+                                <a href="/Main.aspx" class="navbar-brand">
+                                    <img alt="WiNGS" src="/img/SLogo.png">
+                                    <h3 class="brand-text">WiNGS</h3>
+                                </a></li>
+                            <li class="nav-item d-md-none">
+                                <a class="nav-link open-navbar-container" data-toggle="collapse" data-target="#navbar-mobile"><i class="fa fa-ellipsis-v"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="navbar-container content">
+                        <div id="navbar-mobile" class="navbar-collapse">
+                            <ul class="nav navbar-nav mr-auto float-left">
+                                <li class="nav-item d-none d-md-block"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="icon-align-justify2"></i></a></li>
+                                <li class="nav-item d-none d-md-block"><a class="nav-link nav-link-expand" href="#"><i class="icon-android-expand" style="font-size: 24px;"></i></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav float-xs-right">
+                                <li class="dropdown dropdown-user nav-item"><a href="#" data-toggle="dropdown" class="dropdown-toggle nav-link dropdown-user-link"><span class="avatar avatar-online">
+                                    <%--<img src="../../../app-assets/images/portrait/small/avatar-s-1.png" alt="avatar">--%>
+
+                                    <telerik:RadBinaryImage runat="server" ID="RBImg_userProfile" AutoAdjustImageControlSize="false"></telerik:RadBinaryImage>
+
+                                    <i></i></span><span class="user-name">
+                                        <asp:Label ID="lbl_userfname" runat="server"></asp:Label>
+                                    </span></a>
+                                    <div class="dropdown-menu dropdown-menu-right">
+                                        <ul style="padding-left: 0">
+                                            <li onclick="EditProfWindow(); return false;"><a href="#" class="dropdown-item"><i class="icon-head"></i>Edit Profile </a></li>
+                                            <%--<li><span class="isDisabled"><a href="#" class="dropdown-item"><i class="icon-mail6"></i>My Inbox</a></span></li>
+                                            <li><span class="isDisabled"><a href="#" class="dropdown-item"><i class="icon-clipboard2"></i>Task</a></span></li>
+                                            <li><span class="isDisabled"><a href="#" class="dropdown-item"><i class="icon-calendar5"></i>Calender</a></span></li>--%>
+                                            <li onclick="MagagePassWindow(); return false;"><a href="#" class="dropdown-item"><i class="icon-calendar5"></i>Change Password</a></li>
+                                            <div class="dropdown-divider"></div>
+                                            <li>
+                                                <div class="dropdown-item" style="padding:0">
+                                                    <i class="icon-power3" style="display:block;float:left; padding:10px 0px 10px 20px"></i>
+                                                  <%--  <asp:LoginStatus runat="server" ID="btn_loginput" Font-Names="Roboto" LogoutAction="Redirect" LogoutText="  Logout" LogoutPageUrl="~/Account/Login" OnLoggingOut="Unnamed_LoggingOut" CssClass="btn_logout" />
+                                      --%>         
+
+                                                    <asp:Button ID="loggingOutBtn" runat="server" class="btn btn-sm btn-light-primary font-weight-bolder" 
+
+                                    Text="Sign Out" OnClick="loggingOutBtn_Click" OnClientClick="document.getElementById('hfield_loggingStat').value='loggingOut'" />
+
+                                <asp:HiddenField ID="hfield_loggingStat" runat="server" />
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- main menu -->
+            <div class="main-menu menu-fixed menu-dark menu-accordion menu-bordered menu-shadow">
+                <!-- main menu content   main-menu-navigation -->
+                <div class="main-menu-content">
+                    <ul id="mainmenunavigation" runat="server" data-menu="menu-navigation" class="navigation navigation-main">
+                    </ul>
+                </div>
+
+                <div class="main-menu-content">
+                    <div class="mm-panel mm-hasnavbar" id="divtest" runat="server">
+                        <ul id="Ul1" runat="server" data-menu="menu-navigation" class="navigation navigation-main">
+                        </ul>
+                    </div>
+                    <!-- /main menu content-->
+                </div>
+                <!-- / main menu-->
+
+            </div>
+            <div class="app-content content ">
+                <div class="content-wrapper">
+                    <%--   <div class="content-header row">
+                </div>
+                <div class="content-body">
+                    <!-- CRM stats -->
+                    <div class="row">--%>
+                    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                    </asp:ContentPlaceHolder>
+
+                    <%--</div>--%>
+                </div>
+            </div>
+
+        </telerik:RadAjaxPanel>
+
+        <telerik:RadWindowManager RenderMode="Lightweight" EnableShadow="true" Behaviors="Close" ID="RWM_Account" CssClass="RWM_Account" Width="400" Height="450"
+            DestroyOnClose="true" RestrictionZoneID="RestrictionZone" Opacity="99" runat="server" VisibleStatusbar="false" VisibleTitlebar="false" Modal="true">
+            <Windows>
+                <telerik:RadWindow RenderMode="Lightweight" ID="RW_EditProfile" Modal="true" runat="server" OnClientClose="refreshParent">
+                </telerik:RadWindow>
+                <telerik:RadWindow RenderMode="Lightweight" class="RW_ManagePassword" ID="RW_ManagePassword" Modal="true" runat="server" OnClientClose="DoLogout">
+                </telerik:RadWindow>
+
+            </Windows>
+        </telerik:RadWindowManager>
+
+    </form>
+
+
+    <footer class="footer fixed-bottom footer-dark navbar-border navbar-shadow">
+
+        <%--  <p class="clearfix text-muted text-sm-center mb-0 px-2">--%>
+        <p class="clearfix blue-grey lighten-2 text-sm-center mb-0 px-2">
+            <span class="float-md-left d-block d-md-inline-block">Copyright &copy; <%: DateTime.Now.Year %>  -  Design & Developed by <a href="https://www.esat.kuleuven.be/stadius/"
+                target="_blank" class="text-bold-800 grey darken-2">STADIUS</a>. All rights reserved.</span>
+        </p>
+    </footer>
+
+    <%--<script src="/assets/js/jquery-3.3.1.min.js" type="text/javascript"></script>--%>
+    <script src="/app-assets/js/core/libraries/jquery.min.js" type="text/javascript"></script>
+    <script src="/app-assets/vendors/js/ui/tether.min.js" type="text/javascript"></script>
+    <script src="/app-assets/vendors/js/ui/popper.min.js" type="text/javascript"></script>
+    <script src="/app-assets/js/core/libraries/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/app-assets/vendors/js/ui/perfect-scrollbar.jquery.min.js" type="text/javascript"></script>
+    <script src="/app-assets/vendors/js/ui/unison.min.js" type="text/javascript"></script>
+    <script src="/app-assets/vendors/js/ui/blockUI.min.js" type="text/javascript"></script>
+    <script src="/app-assets/vendors/js/ui/jquery.matchHeight-min.js" type="text/javascript"></script>
+    <%--<script src="/app-assets/vendors/js/ui/jquery-sliding-menu.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/sliders/slick/slick.min.js" type="text/javascript"></script>--%>
+    <script src="/app-assets/vendors/js/ui/screenfull.min.js" type="text/javascript"></script>
+    <%--<script src="/app-assets/vendors/js/extensions/pace.min.js" type="text/javascript"></script>--%>
+    <!-- BEGIN VENDOR JS-->
+    <!-- BEGIN PAGE VENDOR JS-->
+    <script src="/app-assets/vendors/js/menu/jquery.mmenu.all.min.js" type="text/javascript"></script>
+    <%--<script src="/app-assets/vendors/js/extensions/jquery.knob.min.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/js/scripts/extensions/knob.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/charts/raphael-min.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/charts/morris.min.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/charts/chart.min.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/charts/jvector/jquery-jvectormap-2.0.3.min.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/charts/jvector/jquery-jvectormap-world-mill.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/data/jvector/visitor-data.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/charts/echarts/echarts.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/timeline/horizontal-timeline.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/extensions/unslider-min.js" type="text/javascript"></script>--%>
+    <%--<script src="/app-assets/vendors/js/extensions/dropzone.min.js" type="text/javascript"></script>--%>
+
+
+    <script src="/app-assets/vendors/js/forms/icheck/icheck.min.js" type="text/javascript"></script>
+    <script src="/app-assets/js/scripts/forms/checkbox-radio.js" type="text/javascript"></script>
+
+
+    <script src="/app-assets/vendors/js/menu/jquery.mmenu.all.min.js" type="text/javascript"></script>
+    <script src="/app-assets/vendors/js/forms/select/select2.full.min.js" type="text/javascript"></script>
+    <%--<script src="/app-assets/js/scripts/forms/select/form-select2.js" type="text/javascript"></script>--%>
+
+    <!-- END PAGE VENDOR JS-->
+    <!-- BEGIN ROBUST JS-->
+    <script src="/app-assets/js/core/app-menu.js" type="text/javascript"></script>
+    <script src="/app-assets/js/core/app.js" type="text/javascript"></script>
+    <script src="/app-assets/js/scripts/ui/fullscreenSearch.js" type="text/javascript"></script>
+    <%-- <script src="https://d3js.org/d3.v5.min.js"></script>--%>
+
+    <!-- END ROBUST JS-->
+    <!-- BEGIN PAGE LEVEL JS
+    <script src="/app-assets/js/scripts/pages/dashboard-crm.js" type="text/javascript"></script>
+    -->
+
+
+
+    <script>
+
+        //$(document).ready(function () {
+        //    history.pushState("", document.title, window.location.pathname
+        //        + window.location.search);
+
+        //});
+
+
+        function EditProfWindow() {
+            var wndManager = $find("<%= RWM_Account.ClientID %>");
+
+            var wnd = wndManager.open("/Account/Manage.aspx", "RW_EditProfile");
+
+            //var h = $(document).height();
+            //var w = $(document).width();
+
+            //wnd.set_height(0.48 * h);
+            //wnd.set_width(0.3 * w);
+
+            wnd.show();
+
+        }
+
+        function MagagePassWindow() {
+            var wndManager = $find("<%= RWM_Account.ClientID %>");
+            var wnd = wndManager.open("/Account/ManagePassword.aspx", "RW_ManagePassword");
+            //var h = $(document).height();
+            //var w = $(document).width();
+
+            //wnd.set_height(0.48 * h);
+            //wnd.set_width(0.3 * w);
+
+            wnd.show();
+        }
+
+        function DoLogout(sender, eventArgs) {
+            var arg = eventArgs.get_argument();
+
+            if (arg) {
+                document.getElementById('btn_loginput').click();
+            }
+
+            return false;
+        }
+
+        function refreshParent() {
+            location.reload();
+        }
+      
+       function OnSelect(link) {
+     
+           var Center = '<%= Session["Current_CenterID"] %>';
+            if (Center.length === 0) {
+                alert("Please select a center")
+
+            }
+            else {
+                var links = document.getElementsByTagName("a");
+                console.log(links);
+                for (var l = 0; l < links.length; l++) {
+                    links[l].href = link;
+                }
+            }
+      }
+
+    </script>
+
+
+</body>
+</html>

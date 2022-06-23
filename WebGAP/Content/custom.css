@@ -1,0 +1,54 @@
+﻿body {
+}
+
+
+#RW_ManagePassword_C {
+    overflow: hidden !important;
+}
+
+
+
+form .form-actionspopup {
+    border-top: 1px solid #dadada;
+    padding: 10px 0 !important;
+    margin-top: 0px !important;
+}
+
+form .form-group-popup {
+       margin-bottom: 0px !important;
+}
+
+.axis path,
+.axis line {
+    fill: none;
+    stroke: #000;
+    shape-rendering: crispEdges;
+}
+
+path.line {
+    fill: none;
+    stroke-width: 1px;
+    pointer-events: none;
+}
+
+.zoomOut {
+    fill: #66a;
+    cursor: pointer;
+}
+
+.zoomOutText {
+    pointer-events: none;
+    fill: #ccc;
+}
+
+.zoomOverlay {
+    pointer-events: all;
+    fill: none;
+}
+
+.band {
+    fill: none;
+    stroke-width: 2px;
+    stroke: black;
+}
+

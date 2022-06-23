@@ -1,0 +1,962 @@
+﻿
+
+.remember-holder {
+    margin-top: 11px;
+    margin-bottom: 8px;
+    font-size: 12px;
+}
+/*End - Login page*/
+
+
+.gray-bg {
+    background-color: #F3F3F3 !important
+}
+
+.tbl-container {
+    width: 95% !important;
+    margin: 0 10px !important;
+}
+
+    .tbl-container td {
+        /*text-align: left  !important;*/
+        padding: 5px 2px 10px 2px !important;
+    }
+
+    .tbl-container tr:nth-child(even) {
+        background-color: #f9f9f9 !important;
+    }
+
+    .tbl-container tr {
+        border-top: 1px solid #ddd !important;
+    }
+
+    .tbl-container h6 {
+        border: none !important;
+    }
+
+.innerMultiPage .tbl-container {
+    width: 100% !important;
+    float: left !important;
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+}
+
+.innerMultiPage .tbl-filter-container {
+    width: 92% !important;
+    float: left !important;
+    margin-left: 20px !important;
+    margin-top: 10px !important;
+}
+
+/*.tbl-filter-container td {
+    padding: 5px !important;
+}*/
+
+.innerMultiPage .tbl-container tr {
+    border: none !important;
+}
+
+.innerMultiPage .tbl-filter-container .custom-control-label {
+    font-size: 12px !important;
+}
+
+    .innerMultiPage .tbl-filter-container .custom-control-label h6 {
+        border: none !important;
+        padding: 3px 0 10px 0 !important;
+        margin: 0px !important;
+    }
+
+.left-float {
+    float: left !important;
+}
+
+.rddl_filter .rddlInner {
+    background: url("../../img/icon/icon_filter_set.png") no-repeat left !important;
+    padding-left: 30px !important;
+}
+
+.tbl-filter-container tr {
+    padding: 10px !important;
+}
+
+    .tbl-filter-container tr:nth-child(even) {
+        background-color: #f1f1f1 !important;
+    }
+
+.tbl-filter-container .img_pathogen {
+    width: 20px !important;
+    margin-top: -5px !important;
+}
+
+.RTS_filter {
+    margin-top: 19px !important;
+}
+
+    .RTS_filter .rtsLevel {
+        width: 90% !important;
+        float: left !important;
+        font-size: 10px !important;
+        font-weight: bold !important;
+        color: black !important;
+        text-align: left !important;
+    }
+
+.RMP_filter {
+    width: 72% !important;
+    float: left !important;
+    overflow-x:auto;
+}
+
+.RadTabStrip .rtsLink {
+    padding: 4px 0 7px 5px !important;
+    vertical-align: middle !important;
+    text-align: left !important;
+}
+
+.RadTabStrip .rtsImg {
+    margin: 0 !important;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::after {
+    /*background-image: url("data:image/svg+xml;charset=utf8,%3Csvg width='22' height='22' viewBox='0 0 22 22' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'%3E%3Ctitle%3EFill 1 + Fill 11 Copy + Line + Line%3C/title%3E%3Cdefs%3E%3Cpath id='a' d='M6.76 1.54v7.165'/%3E%3C/defs%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cpath d='M10.97 0C4.912 0 0 4.91 0 10.968s4.912 10.97 10.97 10.97c6.06 0 10.97-4.912 10.97-10.97C21.94 4.91 17.03 0 10.97 0' fill='%2328B473'/%3E%3Cpath d='M6.054 14.41a6.087 6.087 0 0 0 5.142 2.837 6.078 6.078 0 1 0-5.136-9.33' stroke='%23FFF' stroke-width='1.2' stroke-linecap='round'/%3E%3Cg transform='rotate(-90 10.43 7.5)'%3E%3Cuse xlink:href='%23a'/%3E%3Cuse stroke='%23FFF' stroke-width='1.2' stroke-linecap='round' xlink:href='%23a'/%3E%3C/g%3E%3Cg stroke='%23FFF' stroke-width='1.2' stroke-linecap='round'%3E%3Cpath d='M12.5 11.2L9.7 8.4M12.5 11.2l-2.8 2.6'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") !important;*/
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%2314AFCA' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !important;
+}
+
+.custom-checkbox .exclude:checked ~ .exclude-label::after, .RadListBox .rlbCheck::after {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3E%3Cpath fill='%23ff0000' d='M6.564.75l-3.59 3.612-1.538-1.55L0 4.26 2.974 7.25 8 2.193z'/%3E%3C/svg%3E") !important;
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before,
+.custom-control-input:checked ~ .custom-control-label::before {
+    background-color: ghostwhite !important
+}
+
+.RadListBox .rlbCheck {
+    margin-right: 6px !important;
+    opacity: 0.7 !important;
+    margin-top: 5px !important;
+}
+
+.fieldSet_left_tab {
+    padding: 10px 0 10px 0 !important;
+}
+
+.fieldSet_middle_tab {
+    padding: 5px 0 5px 0 !important;
+}
+
+.RadAutoCompleteBoxPopup_Bootstrap {
+    top: 150px !important;
+}
+
+.close-div {
+    width: 10% !important;
+    float: right !important;
+    color: #ff0000 !important;
+    font-weight: bolder !important;
+    background: none !important;
+    border: none !important;
+}
+
+    .close-div:hover, .close-div:active {
+        width: 10% !important;
+        float: right !important;
+        color: #000 !important;
+        font-weight: bolder !important;
+        background: none !important;
+        border: none !important;
+    }
+
+
+.glyphicon {
+    position: relative !important;
+    top: 1px !important;
+    display: inline-block !important;
+    font-family: 'Glyphicons Halflings' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    line-height: 1 !important;
+    -webkit-font-smoothing: antialiased !important;
+    -moz-osx-font-smoothing: grayscale !important;
+}
+
+.glyphicon-triangle-bottom {
+    background: url('../../img/icon/icon_arrow_bottom.png') no-repeat left center !important;
+    width: 18px !important;
+    height: 10px !important;
+}
+
+.btn_collapse {
+    border-bottom: 1px solid #ddd !important;
+    margin-top: 10px !important;
+    padding-bottom: 10px !important;
+    width: 100% !important;
+    border-top: 0 !important;
+    background: no-repeat !important;
+    text-align: left !important;
+    border-left: 0 !important;
+    border-right: 0 !important;
+    color: #14AFCA !important;
+}
+
+    .btn_collapse:active, .btn_collapse:focus {
+        outline: 0 !important;
+        border: none !important;
+    }
+
+/* The alert message box */
+.alert {
+    padding: 5px 20px !important;
+    background-color: #b7f5ff !important;
+    border: 1px solid #a0dee8 !important;
+    border-radius: 5px !important;
+    font-size: 12px !important;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px !important;
+    color: white !important;
+    font-weight: bold !important;
+    float: right !important;
+    font-size: 22px !important;
+    line-height: 20px !important;
+    cursor: pointer !important;
+    transition: 0.3s !important;
+}
+
+    /* When moving the mouse over the close button */
+    .closebtn:hover {
+        color: black !important;
+    }
+
+#operationDiv {
+    background-color: #FCFCFC !important;
+    width: 5% !important;
+    float: left !important;
+    margin: 10px 5px 0 5px !important;
+    padding-left: 8px !important;
+    height: 250px !important;
+    border-radius: 5px !important;
+    border: 1px solid #DEDEDE !important;
+    -webkit-transition: border 0.1s linear, box-shadow 0.1s linear !important;
+    -moz-transition: border 0.1s linear, box-shadow 0.1s linear !important;
+    transition: border 0.1s linear, box-shadow 0.1s linear !important;
+}
+
+    #operationDiv.active {
+        border-color: #aaa !important;
+        -webkit-box-shadow: 0 0 5px #aaa !important;
+        -moz-box-shadow: 0 0 5px #aaa !important;
+        box-shadow: 0 0 5px #aaa !important;
+    }
+
+.btn_and {
+    margin-top: 150px !important;
+}
+
+.panel {
+    width: 100% !important;
+    border-radius: 5px !important;
+    background: #d6f2ff !important;
+    min-height: 50px !important;
+    color: #1c2223 !important;
+    padding: 10px !important;
+    border: 1px solid #b3ddef !important;
+}
+
+
+
+/*chart nodes*/
+.orgchart {
+    display: inline-block !important;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif !important;
+    font-size: 12px !important;
+}
+
+    .orgchart, .orgchart ul {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+        /*align children horizontally using CSS flex*/
+        .orgchart ul {
+            display: flex !important;
+        }
+
+        /*align nodecontent and children list vertically*/
+        .orgchart li {
+            display: flex !important;
+            flex-direction: column !important;
+            position: relative !important;
+        }
+
+        /*arrange the nodecontent centered above the children list*/
+        .orgchart .nodecontent {
+            align-self: center !important;
+            position: relative !important;
+            margin: 15px 5px 10px 5px !important;
+            background-color: #b7f5ff;
+            padding: 4px 12px 4px 9px !important;
+            border-radius: 5px !important;
+        }
+
+        .orgchart .collapsed > ul {
+            display: none !important;
+        }
+
+        /*connections*/
+        .orgchart li::before,
+        .orgchart .nodecontent::after,
+        .orgchart .nodecontent::before {
+            box-sizing: border-box !important;
+            content: '' !important;
+            position: absolute !important;
+            z-index: 999 !important;
+            border: 0px solid #ddd !important;
+        }
+
+        .orgchart li:not(:only-child)::before {
+            border-top-width: 2px !important;
+            width: 100% !important;
+            height: 20px !important;
+            top: 0px !important;
+        }
+
+        .orgchart li:first-child::before {
+            width: calc(50% + 1px) !important;
+            right: 0 !important;
+            border-left-width: 2px !important;
+            border-top-left-radius: 7px !important;
+            border-color: #fcbba1 !important;
+        }
+
+        .orgchart li:last-child::before {
+            width: calc(50% + 1px) !important;
+            border-right-width: 2px !important;
+            border-top-right-radius: 7px !important;
+            border-color: #c7e9c0 !important;
+        }
+
+        .orgchart .nodecontent::after,
+        .orgchart .nodecontent::before {
+            border-left-width: 2px !important;
+            width: 2px !important;
+            height: 20px !important;
+            left: calc(50% - 1px) !important;
+        }
+
+        .orgchart .nodecontent::before {
+            top: -20px !important;
+        }
+
+        .orgchart .nodecontent::after {
+            bottom: -20px !important;
+        }
+
+        .orgchart .diamond-shape {
+            background-color: gainsboro !important;
+            height: 35px !important;
+            text-align: center !important;
+            transform: rotate(45deg) !important;
+            width: 35px !important;
+            align-self: center !important;
+            position: relative !important;
+            margin: 0px 0px 4px 0 !important;
+            padding: 6px 5px 5px 5px !important;
+            border-radius: 7px !important;
+        }
+
+            .orgchart .diamond-shape .innernodecontent {
+                height: 35px !important;
+                transform: rotate(-45deg) !important;
+                vertical-align: middle !important;
+                width: 35px !important;
+                font-size: 11px !important;
+            }
+
+        .orgchart li:first-child:not(:only-child) > .nodecontent::before,
+        .orgchart li:last-child:not(:only-child) > .nodecontent::before {
+            border-left-width: 0px !important;
+        }
+
+        .orgchart .middleDiamond::before {
+            transform: rotate(20deg) !important;
+        }
+
+        .orgchart .middleDiamond {
+            transform: skewY(20deg) !important;
+        }
+
+            .orgchart .middleDiamond::after {
+                transform: scaleY(1.5) !important;
+            }
+
+        .orgchart .leaf > .nodecontent::after,
+        .orgchart .root > .nodecontent::before,
+        .orgchart .collapsed > .nodecontent::after {
+            display: none !important;
+        }
+
+.radioParentChild {
+    text-align: left !important;
+    border-bottom: 1px solid #ccc !important;
+    padding: 5px !important;
+    width: 90% !important;
+    display: block !important;
+}
+
+.RadListBox_Material .rlbItem {
+    padding: 0 5px !important;
+    float: left !important;
+    margin: 5px !important;
+    background-color: #eee !important;
+    border-radius: 5px !important;
+}
+
+.RadListBox_Material .rlbSelected.rlbItem {
+    background-color: #F0F8FF !important;
+}
+
+.containerRLB_Condition {
+    width: 50%;
+    padding-right: 5px;
+    float: left;
+    margin-top: 20px;
+    clear: left;
+    font-size: 12px;
+}
+
+.containerRLB_Condition .RadListBox_Material .rlbItem {
+    padding: 0 5px !important;
+    float: none !important;
+    margin: 5px !important;
+    background-color: #F0F8FF !important;
+    border-radius: 5px !important;
+}
+
+.containerRLB_Condition .RadListBox_Material .rlbSelected.rlbItem {
+    background-color: #eee !important;
+}
+
+.panelOrgChart {
+    clear: right !important;
+    padding-top: 10px !important;
+    text-align: center !important;
+    float: left !important;
+    width: 50% !important;
+}
+
+.spanState {
+    float: left !important;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    display: inline-grid !important;
+    margin-right: 9px !important;
+    background-color: #14AFCA !important;
+    padding: 0 2px !important;
+    border-radius: 20px !important;
+    color: #fff !important;
+}
+
+.lblCount {
+    display: block !important;
+    font-size: 11px !important;
+    color: #14AFCA !important;
+}
+
+.errMsg {
+    padding: 5px 20px !important;
+    border-bottom: 1px solid #cc0000 !important;
+    font-size: 11px !important;
+    color: #cc0000 !important;
+    float: left !important;
+    width: 85% !important;
+    margin-bottom: 10px !important;
+}
+
+.RadListBox.rlbFixedHeight .rlbTemplate .rlbTemplateContent,
+.containerRLB_Condition .RadListBox.rlbFixedHeight .rlbTemplate .rlbTemplateContent {
+    border: none !important;
+    background-color: #f4f4f4 !important;
+}
+
+.RadListBox_Material .rlbTemplateContent {
+    border-color: #fff !important;
+}
+
+.RadListBox .rlbHeader {
+    border-color: #ccc !important;
+}
+
+.p-icon {
+    margin-top: -5px !important;
+    margin-right: 8px !important;
+    float: left !important;
+}
+
+.RadForm_Bootstrap.rfdLabel label, form label {
+    color: inherit !important
+}
+
+/** Multiple rows and columns */
+.multipleRowsColumns .rcbItem,
+.multipleRowsColumns .rcbHovered {
+    float: left !important;
+    margin: 2px 2px 2px 5px !important;
+    min-height: 13px !important;
+    overflow: hidden !important;
+    padding: 2px 19px 2px 6px !important;
+    width: 180px !important;
+}
+
+.RadComboBoxDropDown_Bootstrap .rcbHovered {
+    background-color: #bceff8 !important;
+    border-radius: 4px !important;
+}
+
+.RadComboBoxDropDown_Bootstrap {
+    font-size: 12px !important
+}
+
+    .RadComboBoxDropDown_Bootstrap ul li {
+        /*border-bottom: 1px solid #e5e5e5  !important;*/
+        background: #f1f1f1 !important;
+        border-radius: 4px !important;
+    }
+
+.custom-desc-label {
+    font-size: 12px !important;
+    background-color: #f1f1f1 !important;
+    display: block !important;
+    margin-top: 20px !important;
+    padding: 10px !important;
+    margin-bottom: 10px !important;
+}
+
+.conditionDiv {
+    color: #03A9F4 !important;
+    background-color: #F0F8FF !important;
+    padding: 2px !important;
+    border-radius: 3px !important;
+    font-size: 13px !important;
+    font-weight: bold !important;
+}
+
+.multipleRowsColumns .rcbSeparator {
+    background: none !important;
+    font-family: Arial !important;
+    font-weight: bold !important;
+    font-style: italic !important;
+    font-size: 10pt !important;
+    padding-left: 6px !important;
+    width: 98% !important;
+    border-bottom: 1px solid #B7F5FF !important;
+    margin-bottom: 10px !important;
+    -webkit-user-select: none !important; /* Webkit */
+    -moz-user-select: none !important; /* Firefox */
+    -ms-user-select: none !important; /* IE 10  */
+    user-select: none !important;
+    display: block !important;
+}
+
+    .multipleRowsColumns .rcbSeparator input[type=checkbox] {
+        visibility: hidden !important;
+    }
+
+.multipleRowsColumns .rcbDisabled {
+    opacity: 1 !important;
+    float: left !important;
+    margin: 2px 2px 2px 5px !important;
+    min-height: 13px !important;
+    overflow: hidden !important;
+    padding: 2px 19px 2px 6px !important;
+}
+
+.custom-control-label::before {
+    background-color: #fff !important;
+    border: 1px solid #ccc !important;
+}
+
+.RadListBox .rlbButtonAreaRight {
+    margin-top: 5px !important;
+}
+
+.RadListBox .rlbCheckAllItems > label, .RadListBox .rlbItem > label {
+    margin-left: 4px !important;
+    float: left !important;
+    margin-right: 8px !important;
+    /*margin-right: 20px !important;*/
+}
+
+.RadButton.rbButton.rbPrimary .rbText {
+    margin-left: 2px !important;
+}
+
+.RadListBox_Bootstrap .rlbGroup, .RadListBox_Bootstrap .rlbTemplateContainer {
+    background-color: transparent !important;
+}
+
+.delBtn, .delBtn:focus {
+    max-height: 30px !important;
+    font-size: 11px !important;
+    max-width: 93px !important;
+}
+
+RadButton_Material.rbButton.rbHovered:hover {
+    max-width: 93px !important;
+}
+.float_right {
+    float: right
+}
+.float_left {
+    float: left
+}
+.padding_right_marginTop {padding-right:6px; border-radius:5px; margin-top30px}
+div.RadListBox .rlbText {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+div.RadListBox .rlbGroup {
+    overflow: auto;
+}
+
+div.RadListBox .rlbList {
+    display: inline-block;
+    min-width: 100%;
+}
+
+* + html div.RadListBox .rlbList {
+    display: inline;
+}
+
+* html div.RadListBox .rlbList {
+    display: inline;
+}
+
+.rb_show_result {
+    float: left;
+    font-size: 11px;
+    padding: 7px !important;
+}
+.rb_del_cond {
+    float: left;
+    font-size: 11px;
+    padding: 7px !important;
+    margin-left:10px
+}
+.RadListBox .rlbButtonAreaBottom .rlbButton {
+    min-height: 30px !important;
+    text-transform: uppercase;
+    padding:0px 10px 1px 10px
+}
+.RadListBox .rlbButtonText {
+    padding: 3px 3px 0 4px;
+    display:inline-block !important
+}
+
+.RadListBox_Material.RadListBoxButtonAreaBottom.rlbFixedHeight .rlbTemplate,
+.RadListBoxButtonAreaBottom.rlbFixedHeight .rlbTemplate {
+    margin-top: 0 !important;
+}
+.RadListBox.rlbFixedHeight .rlbTemplate .rlbBody {
+    width: 100% !important;
+    background-color:white;
+    overflow:hidden
+}
+.RadListBox_Material.RadListBoxButtonAreaBottom.rlbFixedHeight,
+.RadListBoxButtonAreaBottom.rlbFixedHeight {
+    padding: 0 !important;
+}
+.RadListBox_Material.RadListBoxButtonAreaBottom.rlbFixedHeight .rlbGroup {
+    margin-top: 5px !important
+}
+
+.rb_marginTop {
+    margin-top: 13px;
+    float: left;
+    margin-left: 102px;
+}
+.div_selected_filter_list {
+    width: 52%;
+    padding: 10px;
+    float: left;
+    background: #eee;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+}
+.div_select_parent {
+    width: 45%;
+    float: left;
+    background: #eee;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    min-height: 100%;
+    padding:10px 10px 12px 10px;
+    margin-left:13px;
+}
+    .div_select_parent p {
+        background:96% center url(../../img/icon/icon-level-two.png) no-repeat #f4f4f4;
+        padding: 5px 12px;
+        border-bottom: 1px solid #ccc;
+        color: #455A64;
+        margin: 0;
+        font-size: 13px;
+    }
+    .div_select_parent .rddl_parent_lvl{
+        background-color:white !important;
+        padding-top:14px;
+    }
+    .div_select_parent div.rddl_holder {
+        background-color: white;
+        min-height: 85px;
+        margin-bottom: 13px
+    }
+.span-lvl-one {
+    background: right center url(../../img/icon/icon-level-one.png) no-repeat ;
+    display:block;
+}
+.holder-selectedcondition-and-orgchart {
+    width: 99%;
+    float: right;
+    background: #eee;
+    border: 1px solid #e1e1e1;
+    border-radius: 5px;
+    min-height: 100%;
+    padding: 10px 10px 12px 10px;
+    margin-right: 9px;
+}
+    .holder-selectedcondition-and-orgchart p {
+        background: 98% center url(../../img/icon/icon-level-three.png) no-repeat #f4f4f4;
+        padding: 5px 12px;
+        border-bottom: 1px solid #ccc;
+        color: #455A64;
+        margin: 0;
+        font-size: 13px;
+        clear:both;
+    }
+
+.rddlPopup_Bootstrap .rddlItemSelected {
+    background-color: #F0F8FF !important;
+    color: #14AFCA !important;
+    padding: 0 0 0 6px !important;
+}
+
+.rlbCondition .rlbTemplate li.rlbItem span.rlbTemplate table {
+    width: 80% !important
+}
+.rlbCondition .rlbTemplate li.rlbItem span.rlbTemplate .RadButton_Metro.rbButton {
+    background-color: transparent !important;
+    margin-right:10px;
+}
+
+.rlbCondition .rlbTemplate li.rlbItem .rlbItem > label {
+    margin-right:24px !important;
+}
+
+.count_gene_holder {
+    padding: 10px 0;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.count_gene_holder b {
+    float: left !important
+}
+.count_gene_holder .form-control {
+    background-color: #f3f3f3 !important;
+    width: auto;
+    display: inline !important;
+    border-radius: 5px !important;
+    padding:5px;
+    border:none !important;
+    margin-left: 10px
+}
+    .count_gene_holder .chkbox {
+        float: left;
+        margin-top: -6px;
+    }
+.rb_geneCount {
+    font-size: 11px;
+}
+    .rb_geneCount .rbPrimary {
+        padding-left: 3px !important
+    }
+
+.RDD_FilterSet .rcbItem{cursor:pointer}
+.RDD_FilterSet .rcbItem:hover {
+    background-color: #fff !important;
+    cursor: pointer !important;
+}
+
+.RACB_gene .racRemoveTokenLink {
+    top: 19px !important;
+    right: -9px !important;
+}
+.RACB_gene .racToken{
+    padding-top:2px
+}
+
+.rlbTemplate table{width:auto !important}
+.lbl-status {
+    width: auto;
+    /*text-align: center !important;*/
+    vertical-align: middle !important;
+    /*animation: pulse 0.4s infinite;*/
+    padding-left: 10px;
+    float: left;
+}
+
+/*@keyframes pulse {
+        0% {
+            color: black;
+        }
+
+        100% {
+            color: white;
+        }
+    }*/
+/* KEYFRAMES */
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+    }
+
+    to {
+        transform: rotate(359deg);
+    }
+}
+
+
+@keyframes pulse {
+    from {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to {
+        opacity: .25;
+        transform: scale(.75);
+    }
+}
+
+/* GRID STYLING */
+
+* {
+    box-sizing: border-box;
+}
+
+
+
+.spinner-box {
+    width: auto;
+    height: 22px;
+    /*display: flex;*/
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    padding-top: 5px;
+}
+
+
+/* PULSE BUBBLES */
+
+.pulse-container {
+    width: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pulse-bubble {
+    width: 11px;
+    height: 11px;
+    background-color: #3BAFDA;
+    border-radius: 20%;
+}
+
+.pulse-bubble-1 {
+    animation: pulse .4s ease 0s infinite alternate;
+}
+
+.pulse-bubble-2 {
+    animation: pulse .4s ease .2s infinite alternate;
+}
+
+.pulse-bubble-3 {
+    animation: pulse .4s ease .4s infinite alternate;
+}
+
+/*.lds-ellipsis {
+        display: inline-block;
+        position: relative;
+        float: left;
+        margin-left: 20%;
+        margin-top: -25px;
+    }
+
+        .lds-ellipsis div {
+            position: absolute;
+            top: 33px;
+            width: 11px;
+            height: 11px;
+            background: #3BAFDA;
+            animation-timing-function: cubic-bezier(0, 1, 1, 0);
+        }
+
+            .lds-ellipsis div:nth-child(1) {
+                left: 8px;
+                animation: lds-ellipsis1 0.6s infinite;
+            }
+
+            .lds-ellipsis div:nth-child(2) {
+                left: 8px;
+                animation: lds-ellipsis2 0.6s infinite;
+            }
+
+            .lds-ellipsis div:nth-child(3) {
+                left: 32px;
+                animation: lds-ellipsis2 0.6s infinite;
+            }
+
+            .lds-ellipsis div:nth-child(4) {
+                left: 56px;
+                animation: lds-ellipsis3 0.6s infinite;
+            }
+
+    @keyframes lds-ellipsis1 {
+        0% {
+            transform: scale(0);
+        }
+
+        100% {
+            transform: scale(1);
+        }
+    }
+
+    @keyframes lds-ellipsis3 {
+        0% {
+            transform: scale(1);
+        }
+
+        100% {
+            transform: scale(0);
+        }
+    }
+
+    @keyframes lds-ellipsis2 {
+        0% {
+            transform: translate(0, 0);
+        }
+
+        100% {
+            transform: translate(24px, 0);
+        }
+    }*/
+
+
+
+.displyNon {
+    display: none;
+}

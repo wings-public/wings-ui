@@ -1,0 +1,284 @@
+﻿body {
+}
+
+
+
+.Grid_No_Border_Padding {
+    border-width: 0 0 0 0 !important;
+    padding: 0px
+}
+
+.RadWindow_Windows7 .rwTitleBar {
+    border-color: #c1cdde;
+    color: #4c607a;
+    background-color: #f1f5fb;
+    background-image: none !important;
+    border-radius: 3px 3px 0 0;
+    background-color: transparent !important;
+}
+
+
+.RadWindow .rwIcon {
+    display: none;
+}
+
+.rwCommandButton:hover {
+    color: red !important;
+}
+
+.RadComboBox .rcbActionButton {
+   display: none !important;
+    visibility: hidden;
+}
+
+
+.RTS_PhenBook_HPO_OMIM_GENE_Padding .rtsLink {
+    padding: 5px 20px !important;
+}
+
+
+.RG_PhenBook_BorderColor {
+    border-color: #14AFCA !important;
+    border-width: 2px !important;
+    padding: 5px;
+}
+
+
+.RB_PhenBook_AddHPO {
+    height: 29px !important;
+    padding-top: 2px !important;
+}
+
+.RTB_PhenBook_rmv_gradient {
+    border-radius: 4px 0 0 4px !important;
+}
+
+.RadGrid .rgGroupHeaderText {
+    font-size: small;
+    font-weight: bold !impotant;
+    line-height: 1.25;
+    display: inline-block;
+}
+
+
+.RadGrid_Bootstrap .rgGroupHeader td {
+    border-bottom: 1px solid #dedede;
+      background: #d9e6f2 !important;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    /* box-shadow: inset 0 0px 12px 17px rgba(0, 0, 197, 0.1);*/
+}
+
+.RadGrid_Bootstrap .rgGroupHeader {
+    border-bottom: 1px solid #dedede;
+     background: #d9e6f2 !important;
+    padding-bottom: 0px;
+    padding-top: 0px;
+    font-weight: 600 !important;
+}
+
+.Noborder_Clip .RadGrid .rgClipCells .rgHeader, .Noborder_Clip .RadGrid .rgClipCells .rgRow > td, .Noborder_Clip .RadGrid .rgClipCells .rgAltRow > td {
+    overflow: hidden;
+    border: 0px !important;
+}
+
+
+.Noborder_Clip .rgRow > td {
+    overflow: hidden;
+    border: 0px !important;
+}
+
+.Noborder_Clip .rgAltRow > td {
+    overflow: hidden;
+    border: 0px !important;
+}
+
+.RadGrid {
+    box-shadow: 10px 10px 10px 0px rgba(0, 0, 0, 0.2) !important;
+    border-color: #dedede !important;
+}
+
+.RG_NO_Shadow {
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none !important;
+}
+
+
+    .RadGrid .rgHoveredRow {
+        background-color: #f5f0d2 !important;
+        cursor: pointer;
+    }
+
+.RadGrid .GridRowOver {
+    background-color: #f5f0d2 !important;
+    cursor: pointer ;
+}
+
+caption {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+
+
+.RadGrid .rgMasterTable, .RadGrid .rgDataDiv, .RadGrid .rgDetailTable, .RadGrid .rgEditForm table {
+    border-color: #dedede;
+    border-bottom-color: transparent !important;
+    border-right-color: transparent !important;
+}
+
+.RadGrid .rgRow td,
+.RadGrid .rgAltRow td,
+.RadGrid .rgEditRow td,
+.RadGrid .rgFooter td,
+.RadGrid td {
+    height: 20px !important;
+}
+
+.RadAjaxPanel{
+    width:100%
+}
+
+.RadGrid_Bootstrap .rgMasterTable .rgSelectedCell, .RadGrid_Bootstrap .rgSelectedRow td, .RadGrid_Bootstrap td.rgEditRow .rgSelectedRow, .RadGrid_Bootstrap .rgSelectedRow td.rgSorted, .RadGrid .rgSelectedRow td {
+    color: #000000 !important;
+    background: #D5EDF1 !important;
+    border-color: #57BCCE !important;
+}
+.RadGrid_Bootstrap .rgRow > td, .RadGrid_Bootstrap .rgAltRow > td {
+    border-width: 0 0 1px 0 !important;
+    padding: 0 0 0 0 !important;
+    height: auto !important;
+}
+
+.RadGrid_Bootstrap .rgHeader, .RadGrid_Bootstrap .rgHeader a {
+    font-weight: 600 !important;
+    padding-bottom: 2px;
+    padding-top: 2px;
+    color: #37AFC4 !important;
+}
+
+
+
+.RadGrid_Bootstrap .rgHeader, .RadGrid_Bootstrap th.rgResizeCol, .RadGrid_Bootstrap .rgHeaderWrapper, .RadGrid_Bootstrap .rgMultiHeaderRow th.rgHeader, .RadGrid_Bootstrap .rgMultiHeaderRow th.rgResizeCol {
+    border-bottom: 1px solid #57BCCE !important;
+    border-left: 0px solid #dedede !important;
+    border-top: 0px solid #dedede !important;
+    border-right: 0px solid #dedede !important; 
+    background-color: whitesmoke;
+}
+
+
+.RadGrid .rgCommandCell {
+    padding: 4px !important;
+    border-width: 0 0 0 0 !important;
+    border-style: solid !important;
+}
+
+.RadGrid .rgCommandRow .t-button {
+    color: #27A2CF !important;
+    border-radius: 3px;
+    border-color: #27A2CF !important;
+    margin-right: 2px;
+}
+
+.RadGrid_Bootstrap .rgOptions {
+    color: #27A2CF !important;
+}
+
+.RG_Padding_ACL .rgRow > td, .RG_Padding_ACL .rgAltRow > td {
+    padding: 5px 0 !important;
+}
+
+
+.Hover_Selected tr.rgHoveredRow > td {
+    color: #000000 !important;
+    background: #D5EDF1 !important;
+    border-color: #57BCCE !important;
+}
+
+
+.RadSlider_Web20 .rslSelectedregion {
+    background-color: #d4ffbc;
+    background-image: linear-gradient(to right, #d4ffbc, red);
+}
+
+.RadSlider .rslDisabled, .RadSlider .rslDisabled a, .RadSlider .rslDisabled li {
+    cursor: unset !important;
+}
+
+.RadSlider .rslDisabled {
+    opacity: 0.9 !important;
+}
+
+     .RadGrid_img_NoCursor {
+            cursor: unset !important;
+    }
+
+
+.RadWindow_Windows7 .rwContent {
+    min-height: 100% !important
+}
+
+  .Rad_Panel_hidden .rpLink {
+        display: none;
+    }
+
+
+.disabledDiv {
+    pointer-events: none;
+    opacity: 0.5;
+}
+
+.invalid-tooltip {
+    position: absolute !important;
+    top: 100% !important;
+    z-index: 5 !important;
+    display: block;
+    max-width: 100% !important;
+    padding: .25rem .5rem !important;
+    margin-top: .1rem !important;
+    font-size: .875rem !important;
+    color: #fff !important;
+    background-color: rgba(220,53,69,.9) !important;
+    border-radius: .25rem !important;
+}
+
+     /* start POPup Media*/
+
+
+
+
+
+@media (max-width: 1920px) {
+    .RadWindow_Media {
+        min-height: 61% !important;
+        min-width: 70% !important;
+    }
+
+    .RG_Min_height {
+        min-height: 387px !important;
+    }
+
+    @media (max-width:1680px) {
+        .RadWindow_Media {
+            min-height: 92% !important;
+            min-width: 70% !important;
+            top: 10px !important;
+        }
+
+        .RG_Min_height {
+            min-height: 350px !important;
+        }
+    }
+
+    .RadTabStrip.topTab .rtsLI {
+        width: 50% !important
+    }
+
+    .ImgBtn_DisablePointer {
+        cursor: unset !important;
+    }
+
+    /* END POPup Media*/
+   

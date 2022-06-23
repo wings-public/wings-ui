@@ -1,0 +1,31 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true"  CodeBehind="Simple.master.cs" Inherits="WebGAP.Simple" %>
+
+<!DOCTYPE html>
+
+<html style="overflow: hidden;">
+<head runat="server">
+    <title></title>
+     <asp:PlaceHolder runat="server">
+           <%: Styles.Render("~/bundles/AllCustomCss") %>
+        
+           <%: Scripts.Render("~/bundles/jquery") %>
+    </asp:PlaceHolder>
+   
+      <webopt:bundlereference runat="server" path="/app-assets/css/bootstrap.css" />
+        <webopt:bundlereference runat="server" path="/app-assets/css/bootstrap-extended.css"/>
+   <link href="assets/css/Telerik_Custom.css" rel="stylesheet" />
+</head>
+<body>
+    <form id="form1" runat="server">
+       <telerik:RadScriptManager runat="server" ID="RadScriptManager1" />
+
+        <div>
+            <asp:ContentPlaceHolder ID="SimpleContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+     
+
+
+</body>
+</html>

@@ -1,0 +1,267 @@
+﻿.card {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+
+.FamilyMember_ListIemGroup {
+    position: relative;
+    display: block;
+    padding: 0.25rem 0.25rem;
+    margin-bottom: -1px;
+    background-color: #fff;
+    border-left: 1px solid #E4E7ED;
+}
+
+    .FamilyMember_ListIemGroup:first-child {
+        border-top-left-radius: 0.21rem;
+        border-top-right-radius: 0.21rem;
+    }
+
+    .FamilyMember_ListIemGroup:last-child {
+        margin-bottom: 0;
+        border-bottom-right-radius: 0.21rem;
+        border-bottom-left-radius: 0.21rem;
+    }
+
+
+.list-group-flush_MemberFamily .FamilyMember_ListIemGroup {
+    border-right: 0;
+    border-left: 0;
+    border-Top: 0;
+    border-bottom: 0;
+    border-radius: 0;
+}
+
+.blueBg_FamilyMember {
+    background: #14AFCA;
+    color: white;
+    padding: 4px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.blueBg_FamilyMember_small {
+    background: #14AFCA;
+    color: white;
+    padding: 4px;
+    border-bottom-left-radius: 5px;
+    border-top-right-radius: 5px;
+  
+}
+
+.lbl_Status {
+    border-radius: 5px;
+    padding: 6px;
+    text-align: center !important;
+    color: white;
+    display: block !important;
+}
+
+.label_Status_Generated {
+    background-color: darkgray;
+}
+
+.label_Status_Approved {
+    background-color: #4eeac4;
+}
+
+.label_Status_Waiting {
+    background-color: #efdd04;
+}
+
+.label_Status_Rejected {
+    background-color: #f37d7d;
+}
+
+.PhenBook_Hover_HPO_Status_Yes:hover {
+    background: url('../../img/icon/icon_yes_color.png') no-repeat;
+}
+
+.Status_No:hover {
+    background-image: url('../../img/icon/icon_test_no_selected.png');
+}
+.Status_Yes:hover {
+    background-image: url('../../img/icon/icon_test_yes_selected_15.png');
+}
+
+.PhenBook_Hover_HPO_Status_No:hover {
+    background: url('../../img/icon/icon_no_color.png') no-repeat;
+}
+
+.PhenBook_Hover_HPO_Status_NA:hover {
+    background: url('../../img/icon/icon_NA_color.png') no-repeat;
+}
+
+.PhenBook_Hover_Delete_Min:hover {
+    background: url('../../img/icon/icon_delete_min_hover.png') no-repeat;
+}
+
+.Btn_History {
+    cursor: pointer;
+    border-color: #3BAFDA !important;
+    background-color: #3BAFDA !important;
+    float: right;
+    color: azure !important;
+}
+
+
+
+.bgOMIM {
+    border-top: solid 4px;
+    border-color: #EBCE9D;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 2px 5px;
+    color: black;
+}
+
+.bgGene {
+    border-top: solid 4px;
+    border-color: #ffdae7;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 2px 5px;
+    color: black
+}
+
+.bgHPO {
+    border-top: solid 4px;
+    border-color: #800080;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 2px 5px;
+    color: black
+}
+
+.HPOScore {
+    border: solid 1px;
+    border-color: #188aff;
+    border-bottom-left-radius: 2px;
+    border-top-right-radius: 2px;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    padding: 5px 2px 2px 2px;
+    color: #21715b;
+}
+
+.bgStatus {
+    background-color: #e7e8e8;
+    width: 60px;
+    border-bottom-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 3px 1px 1px;
+}
+
+
+.header {
+    font-size: x-large;
+    color: white;
+    padding-left: 13px;
+}
+
+
+
+/*------------------------added by nasim form main page---------------------------*/
+.main-card .icon-android-contacts:before {
+    color: #F6BB42 !important;
+    font-size: 20px
+}
+.main-card .icon-user:before {
+    color: #37BC9B !important;
+    font-size: 20px
+}
+.main-card .icon-paintbucket:before {
+    color: #DA4453 !important;
+    font-size: 20px
+}
+.main-card .icon-check:before {
+    color: #3BAFDA !important;
+    font-size: 20px
+}
+.main-card .icon-home:before {
+    color: #999 !important;
+    font-size: 20px
+}
+.margin-left-25 {
+    margin-left: 25px
+}
+
+/* ---------------------- login by Haleh------------------------------*/
+
+/*Login page*/
+.RCaptcha {
+    margin: 0 auto;
+    background-color: #225077;
+    width: 92%;
+    border-radius: 5px;
+}
+
+    .RCaptcha label {
+        display: block;
+    }
+
+    .RCaptcha img {
+        margin: 0 auto;
+        border: 1px solid #D4D4D4;
+        width: 60% !important;
+    }
+
+    .RCaptcha input {
+        border-radius: 3px;
+        border: 1px solid #70A1C0;
+        width: 60%;
+        margin: 5px auto;
+        height: 27px;
+        text-align: center;
+        background-color: #BFCEE2
+    }
+/*
+body {
+    background: url(/img/Bglogin.png) no-repeat left bottom;
+    background-size: cover;
+}*/
+
+/* ---------------------- login by Nasim------------------------------*/
+
+.login-page {
+    font-size: 12px;
+    /*background-color: #002C49;*/
+    background-color: #042230
+}
+    .login-page a {
+        color: #97a9ff;
+    }
+        .login-page a:hover {
+            color: #6180E0
+        }
+    .login-page label {
+        color: lavender !important;
+    }
+    .login-page .txtb {
+        border: 2px solid #70A1C0;
+        background-color: #70A1C0 !important;
+        border-radius: 5px;
+        opacity: 0.8;
+    }
+.login-page-img {
+    background: url(/img/Bglogin.png) no-repeat 50% 15%;
+    background-size: contain;
+    height: 100%
+}
+.login-page .line-on-side {
+    border-bottom: 1px solid #6180E0 !important;
+    margin-bottom: 30px !important;
+}
+    .login-page .line-on-side span {
+        background: #6180E0;
+        border-radius: 4px;
+        color: #032e44;
+        padding: 5px
+    }
+.login-page .bgColorForm {
+    /*background-color: #1B4672 !important;*/
+    background-color: #0A3A65 !important;
+}

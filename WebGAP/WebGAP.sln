@@ -1,0 +1,24 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32002.261
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WebGAP", "WebGAP.csproj", "{90630299-1752-4BA9-8E68-4A1D9D7F70C7}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{90630299-1752-4BA9-8E68-4A1D9D7F70C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90630299-1752-4BA9-8E68-4A1D9D7F70C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90630299-1752-4BA9-8E68-4A1D9D7F70C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90630299-1752-4BA9-8E68-4A1D9D7F70C7}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B1783E5D-2FBF-463E-B91D-F14FBE2DAE48}
+	EndGlobalSection
+EndGlobal
