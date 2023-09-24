@@ -774,6 +774,12 @@
                                                             Text='<%# string.Format("TraP Score ( chr: {0}, start position: {1}, Reference: {2}, Alternative: {3} )", Eval("chr"), Eval("start_pos"), Eval("ref_all"), Eval("alt_all")) %>' Target="_blank"></asp:HyperLink>
                                                     </td>
                                                 </tr>
+                                                   <tr>
+                                                    <td>
+                                                        <asp:HyperLink runat="server" ID="HyperLink1" NavigateUrl='<%# string.Format("https://franklin.genoox.com/clinical-db/variant/snp/{0}-{1}-{2}-{3}-{4}",HttpUtility.UrlEncode(Eval("chr").ToString()), HttpUtility.UrlEncode(Eval("start_pos").ToString()), HttpUtility.UrlEncode(Eval("ref_all").ToString()), HttpUtility.UrlEncode(Eval("alt_all").ToString()),HttpUtility.UrlEncode(Session["RefBuild"].ToString()) ) %>'
+                                                            Text='<%# string.Format("Franklin  ( chr: {0}, start position: {1}, Reference: {2}, Alternative: {3} , RefBuild : {4})", Eval("chr"), Eval("start_pos"), Eval("ref_all"), Eval("alt_all"), Session["RefBuild"]) %>' Target="_blank"></asp:HyperLink>
+                                                    </td>
+                                                </tr>
                                                 <%--<tr>
                                                         <td>
                                                             <asp:HyperLink runat="server" ID="hl_omim" NavigateUrl='<%# string.Format("https://www.omim.org/search/?search={0}",HttpUtility.UrlEncode(Eval("GENE").ToString()) ) %>'
@@ -979,6 +985,9 @@
             row.findElement("lbl_TotalNoVar").innerText = "";
             row.findElement("lbl_Total").innerText = "";
 
+
+       
+
             if (counter === Number('<%= Session["NumberOfCentersAndHosts"] %>')) {
                 $('.reqIdsLst').empty();
                 $('.variantPhenResultLst').empty();
@@ -1125,10 +1134,25 @@
                         if (res["0"].msg != "") {
                             row.findElement("lbl_msgRelatedToAssembly").classList.remove("displyNon");
                             row.findElement("lbl_msgRelatedToAssembly").innerText = res["0"].msg;
+                            varPhen = "";
+                            varNoPhen = "";
+                            noVarPhen = "";
+                            noVarNoPhen = "";
+                            row.findElement("lbl_VP").innerText = "";
+                            row.findElement("lbl_NVP").innerText = "";
+                            row.findElement("lbl_VNP").innerText = "";
+                            row.findElement("lbl_NVNP").innerText = "";
+                            row.findElement("lbl_TotalPhen").innerText = "";
+                            row.findElement("lbl_TotalNoPhen").innerText = "";
+                            row.findElement("lbl_TotalVar").innerText = "";
+                            row.findElement("lbl_TotalNoVar").innerText = "";
+                            row.findElement("lbl_Total").innerText = "";
+                            console.log('saalamm')
                         }
                         else {
                             row.findElement("lbl_msgRelatedToAssembly").innerText = "";
                             row.findElement("lbl_msgRelatedToAssembly").classList.add("displyNon");
+                          
                         }
 
                         //console.log("vp:" + varPhen + ", vnp: " + varNoPhen + ", nvp: " + noVarPhen + ", nvnp: " + noVarNoPhen);

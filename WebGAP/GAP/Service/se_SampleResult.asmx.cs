@@ -130,7 +130,14 @@ namespace WebGAP.GAP.Service
             //Cmd.Parameters["@CenterIdOfUsr"].Value = Convert.ToInt32(list[7]);
             //Cmd.Parameters.Add("@HostIdOfUser", SqlDbType.Int);
             //Cmd.Parameters["@HostIdOfUser"].Value = Convert.ToInt32(list[8]);
-
+            if (list[5] == "hg19")
+            {
+                list[5] = "1";
+            }
+            else if (list[5] == "hg38")
+            {
+                list[5] = "2";
+            }
 
             Cmd.Parameters.Add("@CenterID", SqlDbType.Int);
             Cmd.Parameters["@CenterID"].Value = Convert.ToInt32(list[0]);

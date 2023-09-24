@@ -110,6 +110,8 @@
                                             <li><span class="isDisabled"><a href="#" class="dropdown-item"><i class="icon-clipboard2"></i>Task</a></span></li>
                                             <li><span class="isDisabled"><a href="#" class="dropdown-item"><i class="icon-calendar5"></i>Calender</a></span></li>--%>
                                             <li onclick="MagagePassWindow(); return false;"><a href="#" class="dropdown-item"><i class="icon-calendar5"></i>Change Password</a></li>
+                                            <!-- included option to generate API Key 08/12/2022 -->
+                                            <li onclick="GenerateAPIKey(); return false;"><a href="#" class="dropdown-item"><i class="icon-key"></i>Generate API key</a></li>
                                             <div class="dropdown-divider"></div>
                                             <li>
                                                 <div class="dropdown-item" style="padding:0">
@@ -308,6 +310,15 @@
             }
       }
 
+       //added javascript function calling the page. 08/12/2022
+
+        function GenerateAPIKey() {
+
+            var wndManager = $find("<%= RWM_Account.ClientID %>");
+            var wnd = wndManager.open("/Account/GenerateAPIKey.aspx", "RW_GenerateAPIKey");
+
+            wnd.show();
+        }
     </script>
 
 

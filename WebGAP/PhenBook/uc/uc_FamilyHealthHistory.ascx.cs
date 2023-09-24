@@ -27,6 +27,8 @@ namespace WebGAP.PhenBook.uc
         static string CnnStr = System.Configuration.ConfigurationManager.ConnectionStrings["MyDbConn"].ConnectionString;
         #endregion} 
 
+
+
         protected void Page_Init(object sender, EventArgs e)
          {
             if (!IsPostBack)

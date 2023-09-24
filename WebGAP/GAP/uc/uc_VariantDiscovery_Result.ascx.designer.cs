@@ -150,13 +150,13 @@ namespace WebGAP.GAP.uc
         protected global::Telerik.Web.UI.RadGrid RG_SampleVariant;
 
         /// <summary>
-        /// RG_VariantDiscovery_details control.
+        /// RG_VariantDiscovery_Detail control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::Telerik.Web.UI.RadGrid RG_VariantDiscovery_details;
+        protected global::Telerik.Web.UI.RadGrid RG_VariantDiscovery_Detail;
 
         /// <summary>
         /// RadWindowManager2 control.
@@ -195,13 +195,13 @@ namespace WebGAP.GAP.uc
         protected global::System.Web.UI.WebControls.SqlDataSource Ds_SampleVariant_Detail;
 
         /// <summary>
-        /// DS_Hpo_PerIndv control.
+        /// DS_Hpo_All control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.SqlDataSource DS_Hpo_PerIndv;
+        protected global::System.Web.UI.WebControls.SqlDataSource DS_Hpo_All;
 
         /// <summary>
         /// RadScriptBlock1 control.

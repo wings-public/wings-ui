@@ -36,7 +36,7 @@ namespace WebGAP.GAP.Service
             SqlParCol = Cmd.Parameters;
 
 
-            Cmd.Parameters.Add("@TrioLocalID", SqlDbType.NVarChar, 20);
+            Cmd.Parameters.Add("@TrioLocalID", SqlDbType.NVarChar, 500);
             Cmd.Parameters["@TrioLocalID"].Value = list[0].ToString();
             Cmd.Parameters.Add("@TrioCode", SqlDbType.NVarChar, 20);
             Cmd.Parameters["@TrioCode"].Value = list[1].ToString();
@@ -158,7 +158,7 @@ namespace WebGAP.GAP.Service
             SqlParameterCollection SqlParCol = default(SqlParameterCollection);
             SqlParCol = Cmd.Parameters;
 
-            Cmd.Parameters.Add("@TrioLocalID", SqlDbType.NVarChar, 20);
+            Cmd.Parameters.Add("@TrioLocalID", SqlDbType.NVarChar, 500);
             Cmd.Parameters["@TrioLocalID"].Value = list[0].ToString();
             Cmd.Parameters.Add("@TrioCode", SqlDbType.NVarChar, 20);
             Cmd.Parameters["@TrioCode"].Value = list[1].ToString();

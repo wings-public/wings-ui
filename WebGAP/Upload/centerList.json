@@ -1,1 +1,1 @@
-[{"HostId":1,"CenterId":2,"IpCenter":"https://wings-ua-dev.biomina.be/kul/dev/"},{"HostId":1,"CenterId":3,"IpCenter":"https://wings-ua-dev.biomina.be/ua/dev/local/"}]
+[{"HostId":1,"CenterId":2,"IpCenter":"https://wings-ua.biomina.be/kul/prod/"},{"HostId":1,"CenterId":3,"IpCenter":"https://wings-ua.biomina.be/ua/prod/"},{"HostId":3,"CenterId":3,"IpCenter":"https://wings-ua.biomina.be/minnds/ua/prod/"}]

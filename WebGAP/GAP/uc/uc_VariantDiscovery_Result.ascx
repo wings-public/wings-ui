@@ -9,7 +9,7 @@
         <telerik:AjaxSetting AjaxControlID="RG_SampleVariant">
             <UpdatedControls>
                 <telerik:AjaxUpdatedControl ControlID="RG_SampleVariant" />
-                <telerik:AjaxUpdatedControl ControlID="RG_VariantDiscovery_details" LoadingPanelID="RadAjaxLoadingPanel1" />
+                <telerik:AjaxUpdatedControl ControlID="RG_VariantDiscovery_Detail" LoadingPanelID="RadAjaxLoadingPanel1" />
                 <%--               <telerik:AjaxUpdatedControl ControlID="RLV_Lab_Findings" LoadingPanelID="RadAjaxLoadingPanel1" />--%>
             </UpdatedControls>
         </telerik:AjaxSetting>
@@ -45,7 +45,7 @@
         <telerik:AjaxSetting AjaxControlID="btnShowStats">
             <UpdatedControls>
                 <telerik:AjaxUpdatedControl ControlID="btnShowStats" />
-                <telerik:AjaxUpdatedControl ControlID="RG_SampleVariant_Details" LoadingPanelID="RadAjaxLoadingPanel1" />
+                <telerik:AjaxUpdatedControl ControlID="RG_VariantDiscovery_Detail" LoadingPanelID="RadAjaxLoadingPanel1" />
             </UpdatedControls>
         </telerik:AjaxSetting>
         <telerik:AjaxSetting AjaxControlID="RG_VariantDiscovery_details">
@@ -231,13 +231,13 @@
                                     <HeaderStyle Width="10%" VerticalAlign="Middle" HorizontalAlign="Center" Font-Size="Medium"></HeaderStyle>
                                     <ItemStyle Width="10%" VerticalAlign="Middle" HorizontalAlign="Center" Font-Size="Small" />
                                 </telerik:GridBoundColumn>
-                                    <telerik:GridBoundColumn DataField="CountPos" DataType="System.String" UniqueName="Count">
+                                    <telerik:GridBoundColumn DataField="CountPos" DataType="System.String" HeaderText="Count" UniqueName="Count">
                                     <HeaderStyle Width="10%" VerticalAlign="Middle" HorizontalAlign="Center" Font-Size="Medium"></HeaderStyle>
                                     <ItemStyle Width="10%" VerticalAlign="Middle" HorizontalAlign="Center" Font-Size="Small" />
                                 </telerik:GridBoundColumn>
 
                                 
-                                <telerik:GridBoundColumn DataField="result_type" DataType="System.String" UniqueName="result_type">
+                                <telerik:GridBoundColumn DataField="result_type" DataType="System.String" HeaderText="ResType" UniqueName="result_type">
                                     <HeaderStyle Width="10%" VerticalAlign="Middle" HorizontalAlign="Center" Font-Size="Medium"></HeaderStyle>
                                     <ItemStyle Width="10%" VerticalAlign="Middle" HorizontalAlign="Center" Font-Size="Small" />
                                 </telerik:GridBoundColumn>
@@ -281,8 +281,8 @@
 
             <div style="width: 50%; float: right; margin-left: 10px">
 
-                <telerik:RadGrid ID="RG_VariantDiscovery_details" runat="server" RenderMode="Lightweight" AutoGenerateColumns="false" OnItemDataBound="RG_VariantDiscovery_details_ItemDataBound"
-                    AllowPaging="false" AllowSorting="True"  DataSourceID="Ds_SampleVariant_Detail"  ShowGroupPanel="true" CellSpacing="0" CssClass="RG_SampleVariant_Detail" GridLines="None">
+                <telerik:RadGrid ID="RG_VariantDiscovery_Detail" runat="server" RenderMode="Lightweight" AutoGenerateColumns="false" OnItemDataBound="RG_VariantDiscovery_Detail_ItemDataBound"
+                    AllowPaging="false" AllowSorting="True"  DataSourceID="Ds_SampleVariant_Detail"  ShowGroupPanel="true" CellSpacing="0" CssClass="RG_VariantDiscovery_Detail" GridLines="None">
                     <MasterTableView DataSourceID="Ds_SampleVariant_Detail" CommandItemDisplay="None" Name="Master" AutoGenerateColumns="false" BorderColor="Transparent" HeaderStyle-BorderColor="Transparent"
                         GridLines="None">
                         <Columns>
@@ -396,7 +396,7 @@
 
                                         </telerik:RadPageView>
                                         <telerik:RadPageView ID="RadPageView5" runat="server">
-                                            <%-- 
+                                             
                                             <div class="rgHeader condition_title">
                                                 <span style="padding-left: 25px">Statistic</span>
                                             </div>
@@ -415,10 +415,10 @@
                                                     </td></tr>
                                                 <tr>
                                                     <td colspan="2">
-                                                        <telerik:RadComboBox RenderMode="Lightweight" ID="RCB_HpoList" runat="server" Height="200" Width="315" 
-                                                            DropDownWidth="200" EmptyMessage="Choose a HPO" HighlightTemplatedItems="true"
+                                                        <telerik:RadComboBox RenderMode="Lightweight" ID="RCB_HpoList" runat="server"   Height="200" Width="315" 
+                                                            DropDownWidth="200" EmptyMessage="Choose a HPO" HighlightTemplatedItems="true"  ItemsPerRequest="10" EnableAutomaticLoadOnDemand="True" ShowMoreResultsBox="true"
                                                             EnableLoadOnDemand="true" OnClientSelectedIndexChanged="onClick_GetReqId" 
-                                                             Filter="StartsWith" Label="HPO: " DataSourceID="DS_Hpo_PerIndv" DataTextField="HPOID" 
+                                                             Filter="StartsWith" Label="HPO: " DataSourceID="DS_Hpo_All" DataTextField="HPOID" 
                                                             DataValueField="HPOID"  Skin="Silk" >
                                                         </telerik:RadComboBox>
                                                         
@@ -473,7 +473,7 @@
                                                 <tr><td colspan="3">
                                                         <asp:Label runat="server" ID="lbl_msgRelatedToAssembly" CssClass="displyNon" />
                                                     </td></tr>
-                                            </table>--%>
+                                            </table>
                                         </telerik:RadPageView>
                                         <telerik:RadPageView ID="RadPageView6" runat="server">
                                             <div class="rgHeader condition_title">
@@ -729,7 +729,7 @@
             </asp:SqlDataSource>
 
 
-            <asp:SqlDataSource ID="DS_Hpo_PerIndv" runat="server" ConnectionString="<%$ ConnectionStrings:MyDbConn %>"
+            <%--<asp:SqlDataSource ID="DS_Hpo_PerIndv" runat="server" ConnectionString="<%$ ConnectionStrings:MyDbConn %>"
                 SelectCommand="Sp_Filter_Result_Individual_HPOs_Sel" SelectCommandType="StoredProcedure">
                 <SelectParameters>
                     <asp:SessionParameter Name="IndividualID" SessionField="BasedOnIndividual" Type="Int64" />
@@ -737,7 +737,10 @@
                     <asp:SessionParameter Name="CenterID" SessionField="Current_CenterID" Type="Int32" />
 
                 </SelectParameters>
-            </asp:SqlDataSource>
+            </asp:SqlDataSource>--%>
+            <asp:SqlDataSource ID="DS_Hpo_All" runat="server" ConnectionString="<%$ ConnectionStrings:MyDbConn %>"
+                SelectCommand="select HPOID from [WiNGS_BaseInfo_Db].[dbo].[Tbl_HPO]" >
+</asp:SqlDataSource>
     </section>
 </div>
 
@@ -795,10 +798,10 @@
 
         }
 
-<%--        var counter = 0;
+        var counter = 0;
         function onClick_GetReqId() {
 
-            var grid = $find("<%=RG_SampleVariant_Detail.ClientID %>");
+            var grid = $find("<%=RG_VariantDiscovery_Detail.ClientID %>");
             var MasterTable = grid.get_masterTableView();
             var row = MasterTable.get_dataItems()[0];
 
@@ -821,16 +824,19 @@
             var url = "/Upload/centerList.json";
 
 
-            var masterTable = $find("<%=RG_SampleVariant_Detail.ClientID%>").get_masterTableView();
+            var masterTable = $find("<%=RG_VariantDiscovery_Detail.ClientID%>").get_masterTableView();
             var comboHpo = masterTable.get_dataItems()[0].findControl('RCB_HpoList');
 
             var hd_variant = document.getElementById('<%= HF_Variant.ClientID%>');
 
             //var Variant = chr + '-' + start + '-' + ref + '-' + alt;          
             var PhenTerm = comboHpo.get_value(); //'HP:0010704'; //
-            var SeqType = '<%= Session["Trio_SeqType"] %>';
-            var RefBuild = '<%= Session["Trio_Refbuild_ID"] %>';
-
+            <%--var SeqType = '<%= Session["Trio_SeqType"] %>';
+            var RefBuild = '<%= Session["Trio_Refbuild_ID"] %>';--%>
+            var SeqType = '<%= Session["VariantDis_SeqType"] %>'; 
+            var RefBuild = '<%= Session["VariantDis_RefBuild"] %>';
+            
+            
             console.log('RefBuild: ' + RefBuild + 'PhenTerm:' + PhenTerm)
             $.getJSON(url, function (data) {
                 $.each(data, function (HostId, model) {
@@ -858,7 +864,8 @@
                             url: '/GAP/Service/se_SampleResult.asmx/GetReqIdIntRefAsync',
                             success: function (result) {
                                 res = JSON.parse(result.d);
-                                // console.log('res: ' + res["0"].centerId)
+                                console.log('res: ' + res["0"].centerId)
+                                console.log(res);
                                 //$('.reqIdsLst').append('<li> CenterId: ' + res["0"].centerId + ' HostId: ' + res["0"].hostId + ' ReqId: ' + res["0"].reqId + '</li>');
                                 counter++;
                                 get_variantPhenResultAsync(res["0"].centerId, res["0"].hostId, res["0"].reqId);
@@ -902,7 +909,7 @@
             var list = [centerId, hostId, reqId];
             var jsonText = JSON.stringify({ list: list });
 
-            var grid = $find("<%=RG_SampleVariant_Detail.ClientID %>");
+            var grid = $find("<%=RG_VariantDiscovery_Detail.ClientID %>");
             var MasterTable = grid.get_masterTableView();
             var row = MasterTable.get_dataItems()[0];
 
@@ -923,10 +930,10 @@
                 success: function (result) {
                     var res = JSON.parse(result.d);
                     st = res["0"].st;
-
+                    console.log("CenterID " + centerId);
                     if (st == 'inprogress') {
-                        sleepVer2(2000);
-                        setInterval(get_variantPhenResultAsync(centerId, hostId, reqId), 2000);
+                        sleepVer2(100);
+                        setInterval(get_variantPhenResultAsync(centerId, hostId, reqId), 100);
                     }
                     else if (st == 'completed') {
 
@@ -989,7 +996,7 @@
             });
         }
 
---%>
+
 
         function sleepVer2(milliseconds) {
             const date = Date.now();

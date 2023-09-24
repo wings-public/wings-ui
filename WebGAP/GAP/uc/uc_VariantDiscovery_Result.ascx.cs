@@ -91,7 +91,7 @@ namespace WebGAP.GAP.uc
             if (RG_SampleVariant.MasterTableView.Items.Count > 0 && firstLoadRG)
             {
                 RG_SampleVariant.MasterTableView.Items[0].Selected = true;
-                RG_VariantDiscovery_details.DataBind();
+                RG_VariantDiscovery_Detail.DataBind();
                 firstLoadRG = false;
             }
         }
@@ -413,95 +413,96 @@ namespace WebGAP.GAP.uc
 
         protected void btnShowStats_Click(object sender, EventArgs e)
         {
-            //foreach (GridDataItem item in RG_SampleVariant_Detail.MasterTableView.Items)
-            //{
-            //    RadPageView rpv = item.FindControl("RadPageView5") as RadPageView;
+            Console.Write("test");
+            foreach (GridDataItem item in RG_VariantDiscovery_Detail.MasterTableView.Items)
+            {
+                RadPageView rpv = item.FindControl("RadPageView5") as RadPageView;
 
-            //    Label lbl_VP = rpv.FindControl("lbl_VP") as Label;
-            //    lbl_VP.Text = HF_VarPhen.Value;
-            //    Label lbl_NVP = rpv.FindControl("lbl_NVP") as Label;
-            //    lbl_NVP.Text = HF_NoVarPhen.Value;
-            //    Label lbl_VNP = rpv.FindControl("lbl_VNP") as Label;
-            //    lbl_VNP.Text = HF_VarNoPhen.Value;
-            //    Label lbl_NVNP = rpv.FindControl("lbl_NVNP") as Label;
-            //    lbl_NVNP.Text = HF_NoVarNoPhen.Value;
+                Label lbl_VP = rpv.FindControl("lbl_VP") as Label;
+                lbl_VP.Text = HF_VarPhen.Value;
+                Label lbl_NVP = rpv.FindControl("lbl_NVP") as Label;
+                lbl_NVP.Text = HF_NoVarPhen.Value;
+                Label lbl_VNP = rpv.FindControl("lbl_VNP") as Label;
+                lbl_VNP.Text = HF_VarNoPhen.Value;
+                Label lbl_NVNP = rpv.FindControl("lbl_NVNP") as Label;
+                lbl_NVNP.Text = HF_NoVarNoPhen.Value;
 
-            //    Label lbl_StatTitle = rpv.FindControl("lbl_StatTitle") as Label;
-            //    lbl_StatTitle.Text = Session["StatTitle"].ToString();
+                Label lbl_StatTitle = rpv.FindControl("lbl_StatTitle") as Label;
+                lbl_StatTitle.Text = Session["StatTitle"].ToString();
 
-            //    AddNewAjaxSetting(btnShowStats.ID, btnShowStats.ID);
-            //    AddNewAjaxSetting(btnShowStats.ID, RG_SampleVariant_Detail.ID);
-            //    AddNewAjaxSetting(btnShowStats.ID, lbl_StatTitle.ID);
+                AddNewAjaxSetting(btnShowStats.ID, btnShowStats.ID);
+                AddNewAjaxSetting(btnShowStats.ID, RG_VariantDiscovery_Detail.ID);
+                AddNewAjaxSetting(btnShowStats.ID, lbl_StatTitle.ID);
 
-            //    RadMultiPage RadMultiPage_DataHolder = (RadMultiPage)item.FindControl("RadMultiPage_DataHolder");
-            //    RadMultiPage_DataHolder.SelectedIndex = 3; // Statistic tab
+                RadMultiPage RadMultiPage_DataHolder = (RadMultiPage)item.FindControl("RadMultiPage_DataHolder");
+                RadMultiPage_DataHolder.SelectedIndex = 3; // Statistic tab
 
-            //    double pValue;
-            //    var matrix = new ConfusionMatrix(new int[,]
-            //    {
-            //                    /*                                Variant                            No-variant  */
-            //                    /* Phenotype    */  {   Convert.ToInt32(HF_VarPhen.Value), Convert.ToInt32(HF_NoVarPhen.Value) },
-            //                    /* No-phenotype */  {   Convert.ToInt32(HF_VarNoPhen.Value), Convert.ToInt32(HF_NoVarNoPhen.Value) },
-            //    });
-
-
-            //    // totals match:
-            //    int[] rowTotals = matrix.RowTotals;
-            //    int[] colTotals = matrix.ColumnTotals;
-            //    int total = matrix.NumberOfSamples;
+                double pValue;
+                var matrix = new ConfusionMatrix(new int[,]
+                {
+                                /*                                Variant                            No-variant  */
+                                /* Phenotype    */  {   Convert.ToInt32(HF_VarPhen.Value), Convert.ToInt32(HF_NoVarPhen.Value) },
+                                /* No-phenotype */  {   Convert.ToInt32(HF_VarNoPhen.Value), Convert.ToInt32(HF_NoVarNoPhen.Value) },
+                });
 
 
+                // totals match:
+                int[] rowTotals = matrix.RowTotals;
+                int[] colTotals = matrix.ColumnTotals;
+                int total = matrix.NumberOfSamples;
 
 
 
-            //    Label lbl_TotalVar = rpv.FindControl("lbl_TotalVar") as Label;
-            //    lbl_TotalVar.Text = colTotals[0].ToString();
-            //    Label lbl_TotalNoVar = rpv.FindControl("lbl_TotalNoVar") as Label;
-            //    lbl_TotalNoVar.Text = colTotals[1].ToString();
-            //    Label lbl_TotalPhen = rpv.FindControl("lbl_TotalPhen") as Label;
-            //    lbl_TotalPhen.Text = rowTotals[0].ToString();
-            //    Label lbl_TotalNoPhen = rpv.FindControl("lbl_TotalNoPhen") as Label;
-            //    lbl_TotalNoPhen.Text = rowTotals[1].ToString();
-            //    Label lbl_Total = rpv.FindControl("lbl_Total") as Label;
-            //    lbl_Total.Text = total.ToString() + " (Grand Total)";
 
 
-            //    String connstring = CnnStr;
-            //    SqlConnection conn = new SqlConnection(connstring);
-            //    SqlDataAdapter SqlDataAdptrCmd = new SqlDataAdapter();
-            //    SqlCommand cmd = new SqlCommand("Sp_Filter_Result_Stats_FisherTest_PValue_Sel", conn);
-            //    cmd.CommandType = CommandType.StoredProcedure;
-            //    cmd.Parameters.Add("@VariantPhenotype", SqlDbType.Int);
-            //    cmd.Parameters.Add("@NoVariantPhenotype", SqlDbType.Int);
-            //    cmd.Parameters.Add("@VariantNoPhenotype", SqlDbType.Int);
-            //    cmd.Parameters.Add("@NoVariantNoPhenotype", SqlDbType.Int);
+                Label lbl_TotalVar = rpv.FindControl("lbl_TotalVar") as Label;
+                lbl_TotalVar.Text = colTotals[0].ToString();
+                Label lbl_TotalNoVar = rpv.FindControl("lbl_TotalNoVar") as Label;
+                lbl_TotalNoVar.Text = colTotals[1].ToString();
+                Label lbl_TotalPhen = rpv.FindControl("lbl_TotalPhen") as Label;
+                lbl_TotalPhen.Text = rowTotals[0].ToString();
+                Label lbl_TotalNoPhen = rpv.FindControl("lbl_TotalNoPhen") as Label;
+                lbl_TotalNoPhen.Text = rowTotals[1].ToString();
+                Label lbl_Total = rpv.FindControl("lbl_Total") as Label;
+                lbl_Total.Text = total.ToString() + " (Grand Total)";
 
-            //    cmd.Parameters["@VariantPhenotype"].Value = Convert.ToInt32(HF_VarPhen.Value);
-            //    cmd.Parameters["@NoVariantPhenotype"].Value = Convert.ToInt32(HF_NoVarPhen.Value);
-            //    cmd.Parameters["@VariantNoPhenotype"].Value = Convert.ToInt32(HF_VarNoPhen.Value);
-            //    cmd.Parameters["@NoVariantNoPhenotype"].Value = Convert.ToInt32(HF_NoVarNoPhen.Value);
 
-            //    SqlDataAdptrCmd.SelectCommand = cmd;
-            //    DataTable myDataTable = new DataTable();
+                String connstring = CnnStr;
+                SqlConnection conn = new SqlConnection(connstring);
+                SqlDataAdapter SqlDataAdptrCmd = new SqlDataAdapter();
+                SqlCommand cmd = new SqlCommand("Sp_Filter_Result_Stats_FisherTest_PValue_Sel", conn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.Add("@VariantPhenotype", SqlDbType.Int);
+                cmd.Parameters.Add("@NoVariantPhenotype", SqlDbType.Int);
+                cmd.Parameters.Add("@VariantNoPhenotype", SqlDbType.Int);
+                cmd.Parameters.Add("@NoVariantNoPhenotype", SqlDbType.Int);
 
-            //    try
-            //    {
-            //        conn.Open();
-            //        cmd.ExecuteNonQuery();
-            //        SqlDataAdptrCmd.Fill(myDataTable);
-            //        pValue = Convert.ToDouble(myDataTable.Rows[0]["PValue"]);
+                cmd.Parameters["@VariantPhenotype"].Value = Convert.ToInt32(HF_VarPhen.Value);
+                cmd.Parameters["@NoVariantPhenotype"].Value = Convert.ToInt32(HF_NoVarPhen.Value);
+                cmd.Parameters["@VariantNoPhenotype"].Value = Convert.ToInt32(HF_VarNoPhen.Value);
+                cmd.Parameters["@NoVariantNoPhenotype"].Value = Convert.ToInt32(HF_NoVarNoPhen.Value);
 
-            //        Label lbl_FisherStats = rpv.FindControl("lbl_FisherStats") as Label;
-            //        lbl_FisherStats.Text = "Excact probability: " + pValue.ToString();
-            //    }
-            //    catch (SqlException ex)
-            //    {
-            //        ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "Myscript1", @"radalert('<br/><b>Something went wrong! </b>'); height=120,width=250", true);
+                SqlDataAdptrCmd.SelectCommand = cmd;
+                DataTable myDataTable = new DataTable();
 
-            //    }
+                try
+                {
+                    conn.Open();
+                    cmd.ExecuteNonQuery();
+                    SqlDataAdptrCmd.Fill(myDataTable);
+                    pValue = Convert.ToDouble(myDataTable.Rows[0]["PValue"]);
 
-            //}
-        
+                    Label lbl_FisherStats = rpv.FindControl("lbl_FisherStats") as Label;
+                    lbl_FisherStats.Text = "Excact probability: " + pValue.ToString();
+                }
+                catch (SqlException ex)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this.Page, this.GetType(), "Myscript1", @"radalert('<br/><b>Something went wrong! </b>'); height=120,width=250", true);
+
+                }
+
+            }
+
         }
 
         protected void AddNewAjaxSetting(string AjaxControlId, string AjaxUpdControlId)
@@ -522,7 +523,7 @@ namespace WebGAP.GAP.uc
 
       
 
-        protected void RG_VariantDiscovery_details_ItemDataBound(object sender, GridItemEventArgs e)
+        protected void RG_VariantDiscovery_Detail_ItemDataBound(object sender, GridItemEventArgs e)
         {
             if (e.Item is GridDataItem)
             {
@@ -533,13 +534,13 @@ namespace WebGAP.GAP.uc
 
 
 
-                ////    Label lbl_StatTitle = item.FindControl("lbl_StatTitle") as Label;
-                ////    lbl_StatTitle.Text = "Variant: chr" + RG_SampleVariant.SelectedValues["chr"].ToString() + " : "
-                ////                    + RG_SampleVariant.SelectedValues["start_pos"].ToString() + " "
-                ////                    + RG_SampleVariant.SelectedValues["ref_all"].ToString() + "/" + RG_SampleVariant.SelectedValues["alt_all"].ToString();
+                Label lbl_StatTitle = item.FindControl("lbl_StatTitle") as Label;
+                lbl_StatTitle.Text = "Variant: chr" + RG_SampleVariant.SelectedValues["chr"].ToString() + " : "
+                                + RG_SampleVariant.SelectedValues["start_pos"].ToString() + " "
+                                + RG_SampleVariant.SelectedValues["ref_all"].ToString() + "/" + RG_SampleVariant.SelectedValues["alt_all"].ToString();
 
 
-                ////    Session["StatTitle"] = lbl_StatTitle.Text;
+                Session["StatTitle"] = lbl_StatTitle.Text;
 
                 HiddenField hdn_gnomAD = item.FindControl("hdn_gnomAD") as HiddenField;
                 string geneAD = hdn_gnomAD.Value;
